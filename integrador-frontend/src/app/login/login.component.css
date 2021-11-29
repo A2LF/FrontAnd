@@ -1,0 +1,92 @@
+
+
+.login{
+    width: 500px;
+    position: relative;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    background: #1e2127;
+    text-align: center;
+}
+.login h4{
+    float: left;
+    border-bottom: 6px solid #e01313;
+    margin-bottom: 15px;
+    padding: 13px 0;
+}
+::placeholder{
+    color: aliceblue;
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #e01313;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    width: 80%;
+    float: left;
+    margin: 10px;
+}
+.login input[type = "submit" ].entra{
+    border: 0;
+    background: none;
+    display:inline;
+    margin-left: 10px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #e01313;
+    padding: 14px 120px;
+    align-items:inherit;
+    outline: none;
+    color: white;
+    border-radius: 0;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.login input[type = "submit"].entra:hover{
+    background: #2ecc71;
+    border: 2px solid #2ecc71;
+    font-size: 20px;
+}
+
+fa-icon{
+    float: left;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+a{
+    float: left;
+    color: blue;
+    margin-top: 8px;
+    font-size: 22px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
