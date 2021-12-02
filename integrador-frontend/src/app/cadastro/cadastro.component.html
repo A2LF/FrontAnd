@@ -1,40 +1,35 @@
-<form name='validar' action='#' onsubmit='validar()'>
+<form name='validar' action='#' method="post">
 
     <div class="new_user">
         <h1>Cadastro de novo Usuario</h1>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'user']"></fa-icon>
-            <input type="text" placeholder="Nome" name="nome" value=""
-            [(ngModel)]="nome">
+            <input type="text" placeholder="Nome" name="nome" value="" id='nome'>
         </div>
         <div class="textbox">
             <fa-icon [icon]="['far', 'envelope']"></fa-icon>
-            <input type="email" placeholder="E-mail" name="email" value=""
-            [(ngModel)]="email">
+            <input type="email" placeholder="E-mail" name="email" value="" id='email'>
         </div>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'mobile-alt']"></fa-icon>
-            <input type="text" placeholder="Celular" name="phone" value="" id="phone" formControlName="phone"
-                >
+            <input type="text" placeholder="Celular" name="phone" value="" id='telefone'>
         </div>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'id-card']"></fa-icon>
-            <input type="text" placeholder="CPF" name="cpf" value="" id="cpf" formControlName="cpf"
-                mask="000.000.000-00" />
+            <input type="text" placeholder="CPF" name="cpf" value="" id="cpf" mask="000.000.000-00" />
         </div>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'lock']"></fa-icon>
-            <input type="password" placeholder="Senha" name="password" value="">
+            <input type="password" placeholder="Senha" name="password" value="" id="senha">
         </div>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'lock']"></fa-icon>
-            <input type="password" placeholder="Comfimar Senha" name="confirma_password" value="">
+            <input type="password" placeholder="Comfimar Senha" name="confirma_password" value="" id="">
         </div>
         <div>
-            <input class="salvar" type="submit" id="" name="" value="Cadastrar" onclick="validar()">
+            <input class="salvar" type="submit" id="" name="" value="Cadastrar" onclick="cadastraUsuario()">
         </div>
         <a routerLink="/login">Já sou cadastrado</a>
     </div>
-    nome = {{ nome }}
 
 </form>

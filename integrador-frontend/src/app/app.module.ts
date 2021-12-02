@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './material.module';
+
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxMaskModule } from 'ngx-mask';
 
@@ -13,12 +17,13 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     CadastroComponent,
     LoginComponent,
@@ -37,8 +42,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false // ao salvar vai manter a mascara
     }),
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
