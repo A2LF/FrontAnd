@@ -1,18 +1,11 @@
-<div class="gg">
-  <label for="formFileLg" class="form-label"></label>
-  <input class="form-control form-control-lg" id="formFileLg" type="file">
-</div>
-
-<div *ngIf="isLoaded" style="text-align: center;">
-    <button (click)="prevPage()" [disabled]="page === 1">Prev</button>
-    <span>{{ page }} / {{ totalPages }}</span>
-    <button (click)="nextPage()" [disabled]="page === totalPages">Next</button>
+<label for="formFileLg" class="form-label"></label>
+<input class="form-control form-control-lg" id="formFileLg" type="file">
+<div class="enviar">
+  <div class="textbox">
+    <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+    <input type="email" placeholder="E-mail" name="email" value="" id='email'>
   </div>
-  
-  <pdf-viewer src="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf"
-              [original-size]="false"
-              style="height: 500px; width: 400px;"
-              [show-all]="false"
-              [page]="page"
-              (after-load-complete)="afterLoadComplete($event)"
-  ></pdf-viewer>
+  <div>
+    <input class="enviar" type="submit" name="" value="Enviar">
+  </div>
+</div>

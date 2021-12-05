@@ -1,26 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+
 @Component({
   selector: 'upload-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.css']
 })
-export class UploadComponent {
+export class UploadComponent implements OnInit {
 
-  page: number = 1;
-  totalPages: number = 1;
-  isLoaded: boolean = false;
-
-  afterLoadComplete(pdfData: any) {
-    this.totalPages = pdfData.numPages;
-    this.isLoaded = true;
+  constructor(library: FaIconLibrary) { 
+    library.addIconPacks(fas, far, fab);
   }
 
-  nextPage() {
-    this.page++;
+  ngOnInit(): void {
   }
 
-  prevPage() {
-    this.page--;
-  }
 }
