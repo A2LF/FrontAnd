@@ -19,6 +19,7 @@ import { FooterComponent } from './template/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false // ao salvar vai manter a mascara
     }),

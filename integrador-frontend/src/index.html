@@ -19,7 +19,7 @@
       request.open("POST", url, true)
       request.setRequestHeader("Content-type", "application/json")
       request.send(JSON.stringify(body))
-      request.onload = function() {
+      request.onload = function () {
         console.log(this.responseText)
       }
       return request.responseText
@@ -40,15 +40,59 @@
       body = {
         "cpf": cpf,
         "email": email,
-        "telefone": telefone,        
-        "senha": senha,        
+        "telefone": telefone,
+        "senha": senha,
       }
+
+      fazPost(url, body)
+    }
+    function puxaUsuario() {
+      event.preventDefault()
+      let url = "https://api.autentique.com.br/v2/graphql"
+      let token = "Bearer 3011dbb1511123d9dda14e222326804b9401196a72b2b3d3ce4375910bad019e"
+      autentique.token = token
+
+      attributes = {
+        document: {
+          name: 'NOME DO DOCUMENTO'
+        },
+        signers: [
+          {
+            email: 'ewertoncarvalho37@gmail.com',
+            action: 'SIGN',
+            positions: [
+              {
+                x: '50', // Posição do Eixo X da ASSINATURA (0 a 100) 
+                y: '80', // Posição do Eixo Y da ASSINATURA (0 a 100)
+                z: '1'   // Página da ASSINATURA
+              },
+              {
+                x: '50', // Posição do Eixo X da ASSINATURA (0 a 100)
+                y: '50', // Posição do Eixo Y da ASSINATURA (0 a 100)
+                z: '2'   // Página da ASSINATURA
+              }
+            ]
+          },
+          {
+            email: 'andreilucasa2@gmail.com',
+            action: 'SIGN'
+          },
+          {
+            name: 'Andrei Lucas',
+            action: 'SIGN'
+          }
+        ],
+        file: 'C:/Users/andre/Downloads/Certificado de Participação - Webinar Mentorama Andrei Lucas Leal Ferreira.pdf'
+      };
+
+      autentique.document.create(attributes);
 
       fazPost(url, body)
     }
   </script>
 
 </head>
+
 <body class="bg mat-typography">
   <app-root></app-root>
 </body>
