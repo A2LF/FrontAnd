@@ -12,22 +12,27 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 })
 export class CadastroComponent implements OnInit {
 
-  
+
   nome: string = '';
   email: string = '';
-  celular: string ='';
+  celular: string = '';
   cpf: string = '';
   senha: string = '';
-  csenha:string = '';
+  csenha: string = '';
 
-  constructor(library: FaIconLibrary) { 
+  constructor(library: FaIconLibrary) {
     library.addIconPacks(fas, far, fab);
   }
   ngOnInit(): void {
   }
+
   salvarUsuario(): void {
     console.log('Nome: ', this.nome);
     alert('salvo com Sucesso')
+  }
+
+  autentiqueService(): void {
+    console.log(this.cpf)
   }
 
 }

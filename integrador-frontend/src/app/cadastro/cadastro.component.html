@@ -16,7 +16,7 @@
         </div>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'id-card']"></fa-icon>
-            <input type="text" placeholder="CPF" name="cpf" value="" id="cpf" mask="000.000.000-00" />
+            <input [(ngModel)]="cpf" type="text" placeholder="CPF" name="cpf" value="" id="cpf" mask="000.000.000-00" />
         </div>
         <div class="textbox">
             <fa-icon [icon]="['fas', 'lock']"></fa-icon>
@@ -27,7 +27,7 @@
             <input type="password" placeholder="Comfimar Senha" name="confirma_password" value="" id="">
         </div>
         <div>
-            <input class="salvar" type="submit" id="" name="" value="Cadastrar" onclick="puxaUsuario()">
+            <input class="salvar" type="submit" id="" name="" value="Cadastrar" onclick="autentiqueService()">
         </div>
         <a routerLink="/login">Já sou cadastrado</a>
     </div>

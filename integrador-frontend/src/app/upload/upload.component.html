@@ -1,11 +1,11 @@
-<label for="formFileLg" class="form-label"></label>
-<input class="form-control form-control-lg" id="formFileLg" type="file">
-<div class="enviar">
-  <div class="textbox">
-    <fa-icon [icon]="['far', 'envelope']"></fa-icon>
-    <input type="email" placeholder="E-mail" name="email" value="" id='email'>
-  </div>
-  <div>
-    <input class="enviar" type="submit" name="" value="Enviar">
-  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<div class="wrapper">
+  <header>File Uploader JavaScript</header>
+  <form action="#">
+    <input class="file-input" type="file" name="file" hidden>
+    <i class="fas fa-cloud-upload-alt"></i>
+    <p>Browse File to Upload</p>
+  </form>
+  <section class="progress-area"></section>
+  <section class="uploaded-area"></section>
 </div>

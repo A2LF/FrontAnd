@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     UploadComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     PdfViewerModule,
